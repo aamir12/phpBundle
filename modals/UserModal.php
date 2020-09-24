@@ -32,10 +32,11 @@ class UserModal{
      return $user;
    }
 
-   public function updateProfile($data,$userid){
+   public function updateProfile($data,$userid,$action){
       $db = new Database();
       $condition = array('userid'=>$userid);
       $db->update('users',$data,$condition);
+      logData($userid,$action);
    }
 
    

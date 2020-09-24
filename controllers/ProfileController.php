@@ -26,7 +26,7 @@ function updateProfile($request){
     if($userid){
         $UserModal = new UserModal();
         $data = escapemydata($request['data']);
-        $UserModal->updateProfile($data,$userid);
+        $UserModal->updateProfile($data,$userid,'Update Profile');
         $_SESSION['USER_FNAME'] = $data['firstName'];
         jsonResp(true,'Profile Update Successfully');
         
@@ -55,7 +55,7 @@ function updatePassword($request){
         $data = escapemydata($request['data']);
         $data['password'] = md5($data['password']);
         unset($data['oldPassword']);
-        $UserModal->updateProfile($data,$userid);
+        $UserModal->updateProfile($data,$userid,'Update Password');
         jsonResp(true,'Password change Successfully');
         
     }else{
