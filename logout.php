@@ -11,7 +11,7 @@ if(isset($_REQUEST['type'])){
 	}else
 	if($type == 'lock'){
 		if(isset($_SESSION['USERID'])) {
-			logData($_SESSION['USERID'],'Lock');
+			logData($_SESSION['USERID'],'Lock Screen');
 			unset($_SESSION['ISLOGIN']);
 			echo '<script type="text/javascript">window.location="'.MAIN_URL.'lockscreen.php";</script>';
 		}

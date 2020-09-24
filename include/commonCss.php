@@ -16,4 +16,7 @@
   <link rel="stylesheet" href="<?=ASSETS?>/css/loader.css">
   <!-- jQuery -->
   <script src="<?=ASSETS?>/theme/plugins/jquery/jquery.min.js"></script>
+  <script>
+    var site_url = "<?=MAIN_URL?>";
+  </script>
 </head>

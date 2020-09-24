@@ -19,3 +19,4 @@
 <script src="<?=ASSETS?>/theme/dist/js/adminlte.js"></script>
 <script src="<?=ASSETS?>/theme/plugins/jquery-mousewheel/jquery.mousewheel.js"></script>
 <script src="<?=ASSETS?>/js/common.js"></script>
+<script src="<?=ASSETS?>/angular/angular.min.js"></script>

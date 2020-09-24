@@ -166,7 +166,7 @@
           <img id="userPhoto" src="<?=($_SESSION['PHOTO']!="")?ASSETS.'/files/users/'.$_SESSION['PHOTO']:ASSETS.'/images/defaultUser.png' ?>" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
-          <a href="#" class="d-block"><?=$_SESSION['USER_FNAME']?></a>
+          <a href="#" class="d-block" id="sideUserName"><?=$_SESSION['USER_FNAME']?></a>
         </div>
       </div>
 
@@ -257,22 +257,13 @@
             </a>
           </li>
 
-          <li class="nav-item has-treeview">
-            <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-chart-pie"></i>
+          <li class="nav-item">
+            <a href="<?=MAIN_URL?>profile.php" class="nav-link">
+            <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
-                Setting
-                <i class="right fas fa-angle-left"></i>
+                Profile
               </p>
             </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="pages/charts/chartjs.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Change Password</p>
-                </a>
-              </li>
-            </ul>
           </li>
           
         </ul>

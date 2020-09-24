@@ -52,6 +52,8 @@ class AuthModal
       return $status;
    }
 
+
+
    public function unLockScreen($data){ 
       $db = new Database();
       $status = false;
@@ -59,6 +61,7 @@ class AuthModal
       $userdata = $db->execute($sql,'single');
       if($userdata){
          if($userdata['status'] == 'Active'){
+            logData($data['userid'],'Unlock Screen');
             $_SESSION['ISLOGIN']  = true;
             $status = true;
          }  
@@ -106,8 +109,7 @@ class AuthModal
    }
 
 
-   public function get_user($userid)
-   {
+   public function get_user($userid){
         $db = new Database();
         $condition['where'] = array('user_id'=>$userid);
         $condition['return_type']='single';
